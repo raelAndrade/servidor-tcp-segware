@@ -7,7 +7,7 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.Scanner;
 
-public class Servidor {
+public class ServidorApplication {
 	
 	private ServerSocket servidor;
 	private static Socket cliente;
@@ -30,7 +30,7 @@ public class Servidor {
 	@SuppressWarnings("resource")
 	public static void main( String[] args ) throws IOException {
 		
-		Servidor server = new Servidor();
+		ServidorApplication server = new ServidorApplication();
 		server.inicio(12345);
 		
 		Scanner entrada = new Scanner(cliente.getInputStream());

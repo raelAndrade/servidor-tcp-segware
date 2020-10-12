@@ -9,19 +9,19 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-public class ServidorTest {
+public class ServidorApplicationTest {
 	
-	private Cliente cliente;
+	private ClienteApplication cliente;
 	
 	@Before
 	public void setup() throws UnknownHostException, IOException {
-		cliente = new Cliente();
+		cliente = new ClienteApplication();
 		cliente.startConexao("127.0.0.1", 12345);
 	}
 	
 	@After
 	public void destruirConexao() throws IOException {
-		cliente = new Cliente();
+		cliente = new ClienteApplication();
 	    cliente.stopConexao();
 	}
 	

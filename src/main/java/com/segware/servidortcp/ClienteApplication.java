@@ -17,13 +17,13 @@ import org.apache.log4j.Logger;
 import com.segware.servidortcp.model.Mensagem;
 import com.segware.servidortcp.util.Conexao;
 
-public class Cliente {
+public class ClienteApplication {
 	
 	private Socket clienteSocket;
 	private static PrintWriter saida;
 	private BufferedReader entrada;
 	
-	static final Logger logger = Logger.getLogger(Cliente.class);
+	static final Logger logger = Logger.getLogger(ClienteApplication.class);
 	
 	EntityManager em = new Conexao().getEntityManager();
 	
@@ -56,7 +56,7 @@ public class Cliente {
 		
 		EntityManager em = new Conexao().getEntityManager();
 			
-		Cliente cliente = new Cliente();
+		ClienteApplication cliente = new ClienteApplication();
 		cliente.startConexao("127.0.0.1", 12345);
 		
 		Scanner entrada = new Scanner(System.in);
